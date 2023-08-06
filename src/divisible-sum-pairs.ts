@@ -1,6 +1,4 @@
-'use strict';
-
-main();
+'use strict'
 
 /*
  * Complete the 'divisibleSumPairs' function below.
@@ -12,21 +10,17 @@ main();
  *  3. INTEGER_ARRAY ar
  */
 
-function divisibleSumPairs(n: number, k: number, ar: number[]): number {
-    let countOfDivisibleSumPairs = 0;
+export function divisibleSumPairs(n: number, k: number, ar: number[]): number {
+    let countOfDivisibleSumPairs = 0
 
     for (let i = 0; i < n; i++) {
         for (let j = 1 + i; j < n; j++) {
             if((ar[i] + ar[j]) % k === 0) {
-                console.log(`${ar[i]} + ${ar[j]} = ${ar[i] + ar[j]}`);
-                countOfDivisibleSumPairs++;
+                console.log(`${ar[i]} + ${ar[j]} = ${ar[i] + ar[j]}`)
+                countOfDivisibleSumPairs++
             }
         }
     }
-    return countOfDivisibleSumPairs;
+    return countOfDivisibleSumPairs
 }
 
-function main() {
-    const result = divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2]);
-    console.log(result);
-}

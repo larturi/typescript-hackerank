@@ -5,5 +5,7 @@ npm install
 
 npx tsc --watch
 
-nodemon dist/divisible-sum-pairs.js
+nodemon dist/main --name divisible-sum-pairs
+
+nodemon dist/main --name breaking-best-and-worst-records
 ```
